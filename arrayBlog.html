@@ -1,0 +1,30 @@
+<div id="blogContainer">
+</div>
+
+<script>
+  const blogPosts = [
+    {
+      title: "Başlık 1",
+      body: "Bu bir blog yazısıdır."
+    },
+    {
+      title: "Başlık 2",
+      body: "Bu da bir başka blog yazısıdır."
+    },
+    {
+      title: "Başlık 3",
+      body: "Bu da üçüncü bir blog yazısıdır."
+    }
+  ];
+
+  for (let i = 0; i < blogPosts.length; i++) {
+    const post = blogPosts[i];
+    const blogContainer = document.getElementById("blogContainer");
+    blogContainer.innerHTML += `
+      <div class="post">
+        <h2 class="postTitle">${post.title}</h2>
+        <p class="postBody">${post.body}</p>
+      </div>
+    `;
+  }
+</script>
