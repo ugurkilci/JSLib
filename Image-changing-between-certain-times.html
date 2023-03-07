@@ -1,0 +1,21 @@
+<img src="https://www.notionwebsitebuilder.com/img/notion-website-builder-1.png" class="img shadow img-fluid" style="border-radius:10px">
+
+<script>
+    const images = [
+        "https://www.notionwebsitebuilder.com/img/notion-website-builder-1.png",
+        "https://www.notionwebsitebuilder.com/img/notion-website-builder-2.png",
+        "https://www.notionwebsitebuilder.com/img/notion-website-builder-3.png"
+    ];
+
+    let index = 0;
+    const imgElement = document.querySelector("img.img");
+
+    setInterval(() => {
+    index = (index + 1) % images.length;
+    imgElement.style.opacity = 1;
+    setTimeout(() => {
+        imgElement.src = images[index];
+        imgElement.style.opacity = 1;
+    }, 500);
+    }, 2000);
+</script>
